@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ReactCollapse--collapse {
+    transition: height 300ms;
+}
+
+body {
+    background-color: #ffffff;
+    @apply text-gray-600;
+    @apply text-base;
+    @apply sm:text-lg;
+    @apply duration-300
+}
+
+.header{
+    background: radial-gradient(farthest-side at 0% 100%, #c2c2ffff 0%, #c2e7ffff 25%, #ffd1f9ff 50%, #ecebffff 75%, #c2c2ffff 100%), radial-gradient(farthest-corner at 100% 100%, #c2c2ffff 0%, #ecebffff 25%, #ffd1f9ff 50%, #c2e7ffff 75%, #c2c2ffff 100%);background-blend-mode: overlay;
+}
+
+section{
+    @apply py-20;
+    @apply bg-bg-primary
+}
+
+.cv{
+    background-color: rgba(34, 211, 238, .8);
+}
+
+h1, h2, h3{
+    @apply text-black
+}
+
+h2{
+    @apply text-3xl sm:text-5xl
+}
+
+h3{
+    @apply text-2xl sm:text-3xl
+}
+
+a{
+    transition: .3s;
+}
+
+.header-img{
+    filter: drop-shadow(0px 0px 3px rgb(34 211 238));
+}
+
+input, textarea{
+    border: 2px solid rgb(34 211 238);
+    padding: .3rem 1rem;
+    border-radius: 1.5rem;
+    @apply w-full;
+    @apply mb-8;
+    @apply bg-bg-primary;
+}
+
+.active {
+    color: rgb(4 181 208);
+}
+
+
+
+.portfolio__card--content{
+    transform-style: preserve-3d;
+    transition: .3s;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .3);
+}
+
+.portfolio__card:hover .portfolio__card--content{
+    transform: rotateY(180deg);
+}
+
+.portfolio__card--img{
+    transform: rotateY(0deg) translateZ(1px);
+}
+
+.portfolio__card--info--content{
+    transform: rotateY(180deg);
+    background-color: rgb(255 255 255);
+    overflow: hidden;
+}
+
+.portfolio__card--info{
+    background-color: rgba(255, 255, 255, .3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle{
+    position: absolute;
+    border-radius: 50%;
+    @apply bg-primary;
+    animation: infinite float alternate 2s ease-in;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.circle1{
+    top: 10px;
+    left: 10px;
+    width: 70px;
+    height: 70px;
+}
+
+.circle2{
+    top: 60px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    animation-delay: -0.5s;
+}
+
+.circle3{
+    bottom: 10px;
+    right: 45%;
+    width: 80px;
+    height: 80px;
+    animation-delay: -1s;
+}
+
+@keyframes float {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(20px);
+    }
+}
